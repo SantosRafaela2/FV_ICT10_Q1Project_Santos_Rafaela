@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Contact | Miffy's Cafe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #99c2ff;
+      padding: 15px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #003366;
+      margin: 0 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #0047b3;
+    }
+
+    .container {
+      margin-top: 80px;
+      display: inline-block;
+      background: #f0f8ff;
+      border: 2px solid #99c2ff;
+      border-radius: 12px;
+      padding: 40px;
+      width: 400px;
+      box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #3366cc;
+    }
+
+    p {
+      color: #004080;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #99c2ff;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #99c2ff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #80b3ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you!<br>Send us a message below:</p>
+    <form>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea rows="4" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>

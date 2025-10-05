@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Miffy's Kitchen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<style>
+    body {
+  background-color: #dbe9f6;
+  font-family: "Poppins", sans-serif;
+}
+
+.pastel-nav {
+  background-color: #a5c9f9;
+}
+
+.header-box {
+  background-color: #a5c9f9;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.menu-box {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.chalkboard {
+  background-color: #2f3b44;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 20px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.footer {
+  background-color: #ffffffa0;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+}
+
+</style>
+</head>
+<body>
+  <!-- 🌷 Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light pastel-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🐰 Miffy's Kitchen</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container text-center mt-5">
+    <div class="header-box mb-4">
+      <h1>Miffy's Kitchen</h1>
+      <p><strong>Owner:</strong> Rafaela Santos</p>
+      <p><em>Since 2025</em></p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-5 menu-box">
+        <h3>🍴 Menu 🍴</h3>
+        <table class="table table-bordered mt-3">
+          <thead class="table-primary">
+            <tr><th>Item</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bunny Pancakes</td><td>₱120</td></tr>
+            <tr><td>Miffy's Macarons</td><td>₱80</td></tr>
+            <tr><td>Cloud Milk Tea</td><td>₱90</td></tr>
+            <tr><td>Carrot Cupcake</td><td>₱70</td></tr>
+            <tr><td>Pastel Spaghetti</td><td>₱150</td></tr>
+            <tr><td>Easter Egg Pie</td><td>₱200</td></tr>
+            <tr><td>Molten Lava Mud Cake</td><td>₱250</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-5 chalkboard">
+        <h3>✨ Chalkboard Specials ✨</h3>
+        <ul class="list-unstyled text-start mt-3">
+          <li>🐝 Honey Bunny Latte – ₱110</li>
+          <li>🍓 Strawberry Shortcake – ₱140</li>
+          <li>🥛 Vanilla Milk – ₱95</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer mt-4">
+      <p>⏰ 10:00 AM – 9:00 PM 🍰 Delivery Available!</p>
+    </div>
+  </div>
+</body>
+</html>

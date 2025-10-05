@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Order | Miffy's Cafe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #99c2ff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #003366;
+      margin: 0 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #0047b3;
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px;
+    }
+
+    .menu-box, .order-box {
+      background-color: #f0f8ff;
+      border: 2px solid #99c2ff;
+      border-radius: 12px;
+      box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 350px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #3366cc;
+    }
+
+    h2 {
+      color: #4d79ff;
+      text-align: center;
+    }
+
+    button {
+      background-color: #99c2ff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
+    button:hover {
+      background-color: #80b3ff;
+    }
+
+    ul {
+      margin: 5px 0;
+      padding-left: 20px;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #99c2ff;
+      margin-bottom: 10px;
+    }
+ 
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  
+
+  <h1>Miffy's Cafe Ordering</h1>
+
+  <div class="container">
+    <!-- Menu Section -->
+    <div class="menu-box">
+      <h2>Menu</h2>
+      <form id="orderForm">
+        <label><input type="checkbox" name="items" value="Carbonara"> Bunny Pancakes - ₱120</label><br>
+        <label><input type="checkbox" name="items" value="Carbonara"> Miffy's Macarons - ₱80</label><br>
+        <label><input type="checkbox" name="items" value="Carbonara"> Cloud Milk Tea - ₱90</label><br>
+        <label><input type="checkbox" name="items" value="Carbonara"> Carrot Cupcake - ₱70</label><br>
+        <label><input type="checkbox" name="items" value="Carbonara"> Pastel Spaghetti - ₱150</label><br>
+        <label><input type="checkbox" name="items" value="Carbonara"> Easter Egg Pie - ₱200</label><br>
+        <label><input type="checkbox" name="items" value="Carbonara"> Molten Lava Mud Cake - ₱250</label><br>
+        <label><input type="checkbox" name="items" value="Carbonara"> Honey Bunny Latte – ₱110</label><br>
+        <label><input type="checkbox" name="items" value="Carbonara"> Strawberry Shortcake – ₱140</label><br>
+        <label><input type="checkbox" name="items" value="Carbonara"> Vanilla Milk – ₱95</label><br>
+       </form>
+    </div>
+
+    <!-- Order and Summary Section -->
+    <div class="order-box">
+      <h2>Customer Details</h2>
+      <input type="text" id="name" placeholder="Enter your name" required><br>
+      <input type="text" id="address" placeholder="Enter your address" required><br>
+      <input type="text" id="contact" placeholder="Enter your contact number" required><br>
+      <button type="button" onclick="createOrder()">Create Order</button>
+
+      <div id="summary" style="display:none; margin-top:20px;">
+        <h2>Order Summary</h2>
+        <p><strong>Name:</strong> <span id="sName"></span></p>
+        <p><strong>Address:</strong> <span id="sAddress"></span></p>
+        <p><strong>Contact:</strong> <span id="sContact"></span></p>
+        <p><strong>Items Ordered:</strong></p>
+        <ul id="sItems"></ul>
+        <p><strong>Total:</strong> ₱<span id="sTotal"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function createOrder() {
+      const menu = {
+        "Carbonara": 120,
+        "Garlic Bread": 50,
+        "Caesar Salad": 100,
+        "Iced Tea": 80,
+        "Sparkling Water": 60
+      };
+
+      let name = document.getElementById("name").value;
+      let address = document.getElementById("address").value;
+      let contact = document.getElementById("contact").value;
+
+      let items = document.querySelectorAll("input[name='items']:checked");
+      let total = 0;
+      let list = document.getElementById("sItems");
+      list.innerHTML = "";
+
+      items.forEach(item => {
+        let food = item.value;
+        let price = menu[food];
+        total += price;
+        let li = document.createElement("li");
+        li.textContent = food + " - ₱" + price;
+        list.appendChild(li);
+      });
+
+      document.getElementById("sName").textContent = name;
+      document.getElementById("sAddress").textContent = address;
+      document.getElementById("sContact").textContent = contact;
+      document.getElementById("sTotal").textContent = total;
+
+      document.getElementById("summary").style.display = "block";
+    }
+  </script>
+</body>
+</html>
